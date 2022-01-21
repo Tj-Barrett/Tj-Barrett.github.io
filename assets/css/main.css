@@ -2363,6 +2363,22 @@ input, select, textarea {
 
 /* Tile Actions */
 
+	.tileaction {
+		margin: 0 0 2em 0;
+	}
+
+	.tileaction h3 {
+		font-size: 1em;
+		margin: 0 0 0.5em 0;
+	}
+
+	.tileaction p {
+		font-size: 0.8em;
+		line-height: 1.5em;
+		margin: 0;
+	}
+
+/*
 	.tileactions li {
 		padding: 0 0 0 1em;
 		vertical-align: middle;
@@ -2378,7 +2394,7 @@ input, select, textarea {
 		line-height: 1.5em;
 		margin: 0;
 	}
-
+*/
 
 /* Table */
 
