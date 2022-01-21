@@ -2361,6 +2361,38 @@ input, select, textarea {
 
 		}
 
+/* Tile Actions */
+
+	ul.tileactions {
+		display: -moz-flex;
+		display: -webkit-flex;
+		display: -ms-flex;
+		display: flex;
+		cursor: default;
+		list-style: none;
+		margin-left: -1em;
+		padding-left: 0;
+	}
+
+		ul.tileactions li {
+			padding: 0 0 0 1em;
+			vertical-align: middle;
+		}
+
+
+		ul.tileactions h3 {
+			font-size: 1em;
+			margin: 0 0 0.5em 0;
+		}
+
+		ul.tileactions p {
+			font-size: 0.8em;
+			line-height: 1.5em;
+			margin: 0;
+		}
+
+	}
+
 /* Table */
 
 	.table-wrapper {
