@@ -2359,20 +2359,9 @@ input, select, textarea {
 							margin-left: -0.5em;
 						}
 
-		}
+		
 
 /* Tile Actions */
-
-	ul.tileactions {
-		display: -moz-flex;
-		display: -webkit-flex;
-		display: -ms-flex;
-		display: flex;
-		cursor: default;
-		list-style: none;
-		margin-left: -1em;
-		padding-left: 0;
-	}
 
 		ul.tileactions li {
 			padding: 0 0 0 1em;
@@ -2391,7 +2380,7 @@ input, select, textarea {
 			margin: 0;
 		}
 
-	}
+		}
 
 /* Table */
 
