@@ -2359,28 +2359,26 @@ input, select, textarea {
 							margin-left: -0.5em;
 						}
 
-		
+		}
 
 /* Tile Actions */
 
-		ul.tileactions li {
-			padding: 0 0 0 1em;
-			vertical-align: middle;
-		}
+	.tileactions li {
+		padding: 0 0 0 1em;
+		vertical-align: middle;
+	}
 
+	.tileactions h3 {
+		font-size: 1em;
+		margin: 0 0 0.5em 0;
+	}
 
-		ul.tileactions h3 {
-			font-size: 1em;
-			margin: 0 0 0.5em 0;
-		}
+	.tileactions p {
+		font-size: 0.8em;
+		line-height: 1.5em;
+		margin: 0;
+	}
 
-		ul.tileactions p {
-			font-size: 0.8em;
-			line-height: 1.5em;
-			margin: 0;
-		}
-
-		}
 
 /* Table */
 
