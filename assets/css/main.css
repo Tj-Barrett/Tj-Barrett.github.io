@@ -2055,7 +2055,7 @@ input, select, textarea {
 			display: block;
 			height: 100%;
 			left: 0;
-			opacity: 0.0;
+			opacity: 0.5;
 			position: absolute;
 			top: 0;
 			width: 100%;
@@ -2101,12 +2101,6 @@ input, select, textarea {
 		.image img {
 			border-radius: 0.35em;
 			display: block;
-		}
-
-		.image.center {
-			float: center;
-			margin: 0 1em 1em 0;
-			top: 0.25em;
 		}
 
 		.image.left {
