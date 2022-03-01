@@ -26,7 +26,7 @@ class CrystalFinder(object):
                  verho_coeff=7, verho_cutoff=0.9, min_length=8,
                  method='BallTree', eps=1.1, lam=0.9, leaf_size=30, min_pts=8,
                  second_filt=False, crystalmin=100,
-                 meshing=False, mesh_type='gauss', cntpresent=False):
+                 meshing=False, mesh_type='gauss', buffer=1.0, cntpresent=False):
 
         ####################################
         # Validate File and basic data info
@@ -116,12 +116,16 @@ class CrystalFinder(object):
         else:
             self.second_filt = second_filt
 
-        if crystalmin < 0 or crystalmin == 0:
+        if not crystalmin > 0:
             raise ValueError(
                 "Crystal filter cutoff cannot be negative or equal to zero")
         elif not isinstance(crystalmin, int):
             raise ValueError("Crystal filter cutoff is not an integer")
         self.crystalmin = crystalmin
+
+        ####################################
+        # Meshing
+        ####################################
 
         if meshing > 1:
             raise ValueError("Meshing boolean is not a boolean")
@@ -134,6 +138,10 @@ class CrystalFinder(object):
             self.mesh_type = mesh_type
         else:
             raise TypeError('Unsupported meshing type')
+
+        if buffer < 0:
+            raise ValueError("Mesh buffer must be a positive or zero value")
+        self.buffer = buffer
 
         if cntpresent > 1:
             raise ValueError("CNT presence boolean is not a boolean")
@@ -281,29 +289,60 @@ class CrystalFinder(object):
         #########################################
         # Full Crystalline Dump
         #########################################
+
+        # Writing file
+        seq = open(self.totaloutname, 'w+')
+
+        # Reading
+        f = open(self.filename, 'r')
+        box = f.readlines()[5:8]
+        xlo, xhi = box[0].split()
+        ylo, yhi = box[1].split()
+        zlo, zhi = box[2].split()
+
+        xlo = float(xlo)
+        xhi = float(xhi)
+        ylo = float(ylo)
+        yhi = float(yhi)
+        zlo = float(zlo)
+        zhi = float(zhi)
+
+        xhi = xhi-xlo
+        yhi = yhi-ylo
+        zhi = zhi-zlo
+
+        f.close()
+
         # crystal info
         from numpy import array
         c_loc = []
         for i in range(len(self.moltype)):
             if self.moltype[i] > 1:
                 c_loc.append(
-                    [self.atom[i], self.id[i], self.moltype[i], self.x[i], self.y[i], self.z[i]])
+                    [self.atom[i], self.id[i], self.moltype[i], self.x[i]-xlo, self.y[i]-ylo, self.z[i]-zlo, self.xu[i]-xlo, self.yu[i]-ylo, self.zu[i]-zlo])
         c_loc = array(c_loc)
 
-        seq = open(self.totaloutname, 'w+')
         f = open(self.filename, 'r')
         n = 0
         for line in f.readlines()[0:9]:
             if n == 3:
                 seq.write(str(len(c_loc))+'\n')
+            elif n == 5:
+                seq.write(str(self.buffer) + str(xhi)+'\n')
+            elif n == 6:
+                seq.write(str(self.buffer) + str(yhi)+'\n')
+            elif n == 7:
+                seq.write(str(self.buffer) + str(yhi)+'\n')
             else:
                 seq.write(line)
             n = n+1
 
+        f.close()
+
         for i in range(len(c_loc)):
             string = str(c_loc[i, 0])+' '+str(c_loc[i, 1])+' '+str(c_loc[i, 2])\
             +' '+str(c_loc[i, 3])+' '+str(c_loc[i, 4]) +' '+str(c_loc[i, 5])\
-            +' '+str(c_loc[i, 3])+' '+str(c_loc[i, 4]) +' '+str(c_loc[i, 5])+'\n'
+            +' '+str(c_loc[i, 6])+' '+str(c_loc[i, 7]) +' '+str(c_loc[i, 8])+'\n'
             seq.write(string)
         seq.close()
 
@@ -442,13 +481,9 @@ class CrystalFinder(object):
         zhi = float(zhi)
 
         # For Affine Transform
-        xlen = xhi-xlo + 4
-        ylen = yhi-ylo + 4
-        zlen = zhi-zlo + 4
-
-        xorig = xlo-2
-        yorig = ylo-2
-        zorig = zlo-2
+        xlen = xhi-xlo + 2.0*self.buffer
+        ylen = yhi-ylo + 2.0*self.buffer
+        zlen = zhi-zlo + 2.0*self.buffer
 
         for i in range(len(exist_list)):
             if exist_list[i]:
@@ -461,9 +496,9 @@ class CrystalFinder(object):
                     # Transform box only to remove periodic surface mesh
                     operate_on={'cell'},
                     relative_mode=False,
-                    target_cell=[[xlen, 0, 0, xorig],
-                                 [0, ylen, 0, yorig],
-                                 [0, 0, zlen, zorig]]))
+                    target_cell=[[xlen, 0, 0, 0],
+                                 [0, ylen, 0, 0],
+                                 [0, 0, zlen, 0]]))
 
                 if mesh_type == 'gauss':
                     pipeline.modifiers.append(ConstructSurfaceModifier(
@@ -496,7 +531,7 @@ class CrystalFinder(object):
 
                 del mesh, shape, doc, pipeline
 
-                os.remove(self.meshname+"_cry"+str(actual)+".obj")
+                # os.remove(self.meshname+"_cry"+str(actual)+".obj")
                 os.remove(outname)
 
             if cntpresent:
