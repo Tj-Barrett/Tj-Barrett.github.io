@@ -61,16 +61,16 @@ navy #304c7a
 :root {
 	/* Page Text */
 	--text0: #222222;
-	--text1: #ffffff;
-	--text2: #ffffff;
+	--text1: #222222;
+	--text2: #222222;
 	--text3: #222222;
 	--text4: #ffffff;
 	/* Background  var(--nord6) */
 	--backgroundcolor: #ffffff;
 	--backgroundaccents0: #ffffff;
-	--backgroundaccents1: #ffffff;
+	--backgroundaccents1: #222222;
 	/* Buttons */
-	--buttoncolor: #5a5a5a;
+	--buttoncolor: #222222;
 	--buttonactive: #707070;
 	--buttonhover: #707070;
   /* Floating Menu */
