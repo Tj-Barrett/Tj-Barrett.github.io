@@ -35,28 +35,53 @@ navy #304c7a
 */
 
 
+/* :root {
+/*	/* Page Text */
+/*	--text0: var(--nord0);
+/*	--text1: var(--nord8);
+/*	--text2: var(--nord2);
+/*	--text3: var(--nord14);
+/*	/* Background  var(--nord6) */
+/*	--backgroundcolor: #ffffff;
+/*	--backgroundaccents0: #ffffff;
+/*	--backgroundaccents1: var(--nord0);
+/*	/* Buttons */
+/*	--buttoncolor: var(--nord2);
+/*	--buttonactive: var(--nord5);
+/*	--buttonhover: var(--nord9);
+/*  /* Floating Menu */
+/*	--headerbackground: var(--nord0);
+/*	--headerhover: var(--nord9);
+/*	--headertext: var(--nord2);
+/*	--droptext: var(--nord6);
+/*	--headeractive: var(--nord4);
+/*	--headercurrent: var(--nord14);
+/*}*/
+
 :root {
 	/* Page Text */
-	--text0: var(--nord0);
-	--text1: var(--nord8);
-	--text2: var(--nord2);
-	--text3: var(--nord14);
+	--text0: #222222;
+	--text1: #ffffff;
+	--text2: #ffffff;
+	--text3: #222222;
+	--text4: #ffffff;
 	/* Background  var(--nord6) */
 	--backgroundcolor: #ffffff;
 	--backgroundaccents0: #ffffff;
-	--backgroundaccents1: var(--nord0);
+	--backgroundaccents1: #ffffff;
 	/* Buttons */
-	--buttoncolor: var(--nord2);
-	--buttonactive: var(--nord5);
-	--buttonhover: var(--nord9);
+	--buttoncolor: #5a5a5a;
+	--buttonactive: #707070;
+	--buttonhover: #707070;
   /* Floating Menu */
-	--headerbackground: var(--nord0);
-	--headerhover: var(--nord9);
-	--headertext: var(--nord2);
-	--droptext: var(--nord6);
-	--headeractive: var(--nord4);
-	--headercurrent: var(--nord14);
+	--headerbackground: #222222;
+	--headerhover: #222222;
+	--headertext: #ffffff;
+	--droptext: #ffffff;
+	--headeractive: #222222;
+	--headercurrent: #222222;
 }
+
 
 /*
 	TXT by HTML5 UP
@@ -2600,17 +2625,17 @@ input, select, textarea {
 
 			#nav li:hover a, #nav li:hover span {
 				background: var(--headerhover);
-				color: var(--text0);
+				color: var(--text4);
 			}
 
 			#nav li.active a, #nav li.active span {
 				background: var(--headerhover);
-				color: var(--text0);
+				color: var(--text4);
 			}
 
 			#nav li.current a {
 				background: var(--headercurrent);
-				color: var(--text0);
+				color: var(--text4);
 			}
 
 	.dropotron {
