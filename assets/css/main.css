@@ -3046,7 +3046,7 @@ input, select, textarea {
 						position: absolute;
 						left: 0;
 						top: 0;
-						background: #b1ddab;
+						background: #ffffff;
 						width: 44px;
 						height: 44px;
 						content: '\f0c9';
@@ -3295,7 +3295,7 @@ input, select, textarea {
 		/* Sidebar */
 
 			.sidebar {
-				border-top: solid 2px #e7eae8;
+				border-top: solid 2px #ffffff;
 				padding-top: 50px;
 				margin-top: 30px;
 			}
