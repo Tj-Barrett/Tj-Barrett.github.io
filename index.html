@@ -1,153 +1,342 @@
-<!DOCTYPE HTML>
-<!--
-	Astral by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Thomas J. Barrett, PhD — Computational Materials Scientist specializing in multiscale simulation of polymers and composites.">
+<meta name="theme-color" content="#0A0E14">
+<meta property="og:title" content="Thomas J. Barrett, PhD | Computational Materials Scientist">
+<meta property="og:description" content="Multiscale simulation of polymers and composites - MD and DFT through FEA, machine learning potentials, and open-source scientific software.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://tjbarrett.dev">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Thomas J. Barrett, PhD | Computational Materials Scientist">
+<meta name="twitter:description" content="Multiscale simulation of polymers and composites - MD and DFT through FEA, machine learning potentials, and open-source scientific software.">
+<title>Thomas J. Barrett, PhD | tjbarrett.dev</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- Skip to content for accessibility -->
+<a href="#main-content" class="skip-to-content">Skip to main content</a>
+
+<!-- ===================== NAV ===================== -->
+<nav role="navigation" aria-label="Main navigation">
+  <div class="nav-logo">tj<span>.</span>barrett</div>
+  <ul>
+    <li><a href="#research" aria-label="Jump to research section">Research</a></li>
+    <li><a href="#publications" aria-label="Jump to publications section">Publications</a></li>
+    <li><a href="#tools" aria-label="Jump to tools section">Tools</a></li>
+    <li><a href="#contact" aria-label="Jump to contact section">Contact</a></li>
+  </ul>
+</nav>
+
+<!-- ===================== HERO ===================== -->
+<div class="hero" id="main-content">
+  <div>
+    <!-- Optional: Add profile photo here by uncommenting:
+    <div class="profile-photo">
+      <img src="path-to-your-photo.jpg" alt="Thomas J. Barrett">
+    </div>
+    -->
+    <div class="hero-eyebrow">Computational & Experimental Materials Science</div>
+    <h1>Thomas J.<br><span class="accent">Barrett</span>, PhD</h1>
+    <div class="status-badge">Open to opportunities</div>
+    <p class="hero-desc">
+      Multiscale simulation of polymers and composites - MD and DFT through FEA, machine learning potentials, and open-source scientific software.
+    </p>
+    <div class="hero-links">
+      <a href="#research" class="btn btn-primary">Explore my research</a>
+      <a href="https://github.com/Tj-Barrett" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
+      <a href="https://github.com/Tj-Barrett/Tj-Barrett.github.io/blob/main/Thomas_Barrett_CV.pdf" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">CV</a>
+    </div>
+    <div class="edu-list">
+      <div class="edu-item"><span class="edu-deg">PhD</span><span class="edu-inst">Northeastern University</span><span class="edu-year">2024</span></div>
+      <div class="edu-item"><span class="edu-deg">MS</span><span class="edu-inst">Northeastern University</span><span class="edu-year">2018</span></div>
+      <div class="edu-item"><span class="edu-deg">BS</span><span class="edu-inst">University of Rochester</span><span class="edu-year">2016</span></div>
+    </div>
+  </div>
+
+  <!-- Periodic simulation cell — SVG wireframe signature element -->
+</div>
+
+<!-- ===================== STATS STRIP ===================== -->
+<!-- Patent stat commented out — restore when ready:
+  <div class="stat-item"><div class="stat-num">1</div><div class="stat-label">Pending patent</div></div>
 -->
-<html>
-	<head>
-		<title>Tj Barrett</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<div class="stats-strip">
+  <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">First-author publications</div></div>
+  <div class="stat-item"><div class="stat-num">3+</div><div class="stat-label">Open-source packages</div></div>
+  <div class="stat-item"><div class="stat-num">8+</div><div class="stat-label">Years simulation experience</div></div>
+</div>
 
-		<!-- Wrapper-->
-			<div id="wrapper">
+<hr class="divider"/>
 
-				<!-- Nav -->
-					<nav id="nav">
-						<a href="#" class="icon solid fa-home"><span>Home</span></a>
-						<a href="#publications" class="icon solid fa-book"><span>Publications</span></a>
-						<a href="#research" class="icon solid fa-flask"><span>Research</span></a>
-						<a href="https://github.com/Tj-Barrett" class="icon brands fa-github"><span>Github</span></a>
-						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
-					</nav>
+<!-- ===================== RESEARCH ===================== -->
+<section id="research">
+  <div class="section-eyebrow">Focus areas</div>
+  <h2 class="section-title">Research</h2>
+  <div class="award-badge">🏅 <span>2023 PACK International Research Fellowship</span></div>
+  <div class="research-grid">
+    <div class="research-card">
+      <div class="research-card-tag">Multiscale Modeling</div>
+      <h3>Hierarchical polymer composite simulation</h3>
+      <p>Coarse-grained MD → FEA pipeline for semi-crystalline polymer composites, capturing homo- and heterogeneous crystallization, interphase structure, and continuum mechanical response across length scales.</p>
+    </div>
+    <div class="research-card">
+      <div class="research-card-tag">Scientific Software</div>
+      <h3>Polymer microstructure analysis tools</h3>
+      <p>pothos and mdvoro: open-source Python packages for chain orientation tracking, Voronoi tessellation, and conversion of MD control volumes into FEA representative volume elements.</p>
+    </div>
+    <div class="research-card">
+      <div class="research-card-tag">Digital Twin / Inverse Design</div>
+      <h3>Molecularly imprinted polymer framework</h3>
+      <p>MIPkit: RDKit-driven toolkit for automated vinyl polymerization simulation and in-silico screening of ~100 functional monomers, enabling systematic MIP development without exhaustive synthesis.</p>
+    </div>
+    <div class="research-card">
+      <div class="research-card-tag">Statistical Mechanics</div>
+      <h3>Thermostat and barostat integration</h3>
+      <p>Systematic comparison of Nosé-Hoover integrator schemes, demonstrating that barostat coupling choice has a measurable and underappreciated effect on uniaxial tension results in solid-phase simulations.</p>
+    </div>
+  </div>
+</section>
 
-				<!-- Main -->
-					<div id="main">
+<hr class="divider"/>
 
-						<!-- Me -->
-							<article id="home" class="panel intro">
-								<header>
-									<h1>Thomas J. Barrett</h1>
-									<p>Postdoctoral Researcher, CAU</p>
-								</header>
-								<a href="#publications" class="jumplink pic">
-									<span class="arrow icon solid fa-chevron-right"><span>Publications</span></span>
-									<img src="images/tj.png" alt="" />
-								</a>
-							</article>
+<!-- ===================== PUBLICATIONS ===================== -->
+<section id="publications">
+  <div class="section-eyebrow">Peer-reviewed work</div>
+  <h2 class="section-title">First Author Publications</h2>
+  <div class="pub-list">
+    <div class="pub-item">
+      <div class="pub-num">5</div>
+      <div>
+        <div class="pub-title">Indications of ZIF-8 promoting cell viability in electrospun tricuspid valve scaffolding.<span class="pub-badge">In Preparation</span></div>
+        <div class="pub-venue">Expected 2026</div>
+      </div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-num">4</div>
+      <div>
+        <div class="pub-title">A digital twin for the in-silico screening, polymerization, and rebinding of Molecularly Imprinted Polymers <span class="pub-badge">In Preparation</span></div>
+        <div class="pub-venue">Expected 2026</div>
+        <div class="pub-links">
+          <a href="https://github.com/Tj-Barrett/mipkit" class="pub-link" target="_blank" rel="noopener noreferrer">Package →</a>
+          <a href="https://tjbarrett.org/mipkit-documentation/" class="pub-link" target="_blank" rel="noopener noreferrer">Docs →</a>
+        </div>
+      </div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-num">3</div>
+      <div>
+        <div class="pub-title">Nosé-Hoover Integrators at-a-glance: Barostat integration has a demonstrable effect on uniaxial tension results of solid materials</div>
+        <div class="pub-venue">Journal of Chemical Theory and Computation, 2025</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1021/acs.jctc.4c01190" class="pub-link" target="_blank" rel="noopener noreferrer">Paper →</a>
+          <a href="https://github.com/Tj-Barrett/nose-hoover-schemes" class="pub-link" target="_blank" rel="noopener noreferrer">Simulations →</a>
+        </div>
+      </div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-num">2</div>
+      <div>
+        <div class="pub-title">pothos: A Python package for polymer chain orientation and microstructure evolution monitoring</div>
+        <div class="pub-venue">Journal of Chemical Theory and Computation, 2024</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1021/acs.jctc.4c01216" class="pub-link" target="_blank" rel="noopener noreferrer">Paper →</a>
+          <a href="https://github.com/Tj-Barrett/pothos" class="pub-link" target="_blank" rel="noopener noreferrer">Package →</a>
+        </div>
+      </div>
+    </div>
+    <div class="pub-item">
+      <div class="pub-num">1</div>
+      <div>
+        <div class="pub-title">Fine-scale surface complexity promotes temperature extremes but reduces the spatial extent of refugia on coastal rocks</div>
+        <div class="pub-venue">Ecological Modelling, 501 (110969), 2025</div>
+        <div class="pub-links">
+          <a href="https://doi.org/10.1016/j.ecolmodel.2024.110969" class="pub-link" target="_blank" rel="noopener noreferrer">Paper →</a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div style="margin-top: 1.5rem;">
+    <a href="https://scholar.google.com/citations?user=_dvz1tcAAAAJ" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">Google Scholar profile</a>
+  </div>
+</section>
 
-						<!-- Publications -->
-							<article id="publications" class="panel">
-								<header>
-									<h2>First Author Publications</h2>
-								</header>
-								<section>
-									4. <b>Barrett T.J.</b>, Moldovean-Cioroianu N.S. and Altintas Z. A digital twin for the in-silico screening, polymerization, and rebinding of Molecularly Imprinted Polymers. In preparation, 2026.<br>
-									<!-- <a href="https://doi.org/10.1021/acs.jctc.4c01190"> Preprint Link </a> -->
-									<a href="https://github.com/Tj-Barrett/mipkit"> Package Link </a><br>
-									<a href="https://tjbarrett.org/mipkit-documentation/"> Documentation Link </a>
-									<br>
-									3. <b>Barrett T.J.</b> and Minus M.L. Nosé-Hoover Integrators at-a-glance: Barostat integration has a demonstrable effect on uniaxial tension results of solid materials. Journal of Chemical Theory and Computation, 2025.<br>
-									<a href="https://doi.org/10.1021/acs.jctc.4c01190"> Paper Link </a><br>
-									<a href="https://github.com/Tj-Barrett/nose-hoover-schemes"> Simulations Link </a>
-									<br>
-									2. <b>Barrett T.J.</b> and Minus M.L. pothos: A Python package for polymer chain orientation and microstructure evolution monitoring. Journal of Chemical Theory and Computation, 2024.<br>
-									<a href="https://doi.org/10.1021/acs.jctc.4c01216"> Paper Link </a><br>
-									<a href="https://github.com/Tj-Barrett/pothos"> Package Link </a>
-									<br>
-									1. <b>Barrett T.J.</b> et al. Fine-scale surface complexity promotes temperature extremes but reduces the spatial extent of refugia on coastal rocks. Ecological Modelling, 501 (110969), 2025.<br>
-									<a href="https://doi.org/10.1016/j.ecolmodel.2024.110969"> Paper Link</a>
-									<br>
-								</section>
+<hr class="divider"/>
 
-								<header>
-									<h2>Awards</h2>
-								</header>
-								<section>
-									<p><a href="https://packfellowship.org/"> 2023 : PACK International Research Fellowship </a></p>
-								</section>
-								
-								<section>
-									<p><a href="https://scholar.google.com/citations?user=_dvz1tcAAAAJ&hl=en&authuser=2"> Google Scholar Page </a></p>
-								</section>
+<!-- ===================== TOOLS ===================== -->
+<section id="tools">
+  <div class="section-eyebrow">Open source</div>
+  <h2 class="section-title">Tools & Packages</h2>
+  <div class="tools-grid">
+    <a href="https://github.com/Tj-Barrett/pothos" class="tool-card" target="_blank" rel="noopener noreferrer">
+      <div class="tool-icon">Φ</div>
+      <h3>pothos</h3>
+      <p>Chain orientation and microstructure evolution monitoring for MD trajectories of semi-crystalline polymers.</p>
+      <span class="tool-lang">Python</span>
+    </a>
+    <a href="https://github.com/Tj-Barrett/mdvoro" class="tool-card" target="_blank" rel="noopener noreferrer">
+      <div class="tool-icon">V</div>
+      <h3>mdvoro</h3>
+      <p>Voronoi tessellation of MD simulation cells for conversion into FEA representative volume elements.</p>
+      <span class="tool-lang">Python</span>
+    </a>
+    <a href="https://github.com/Tj-Barrett/mipkit" class="tool-card" target="_blank" rel="noopener noreferrer">
+      <div class="tool-icon">M</div>
+      <h3>MIPkit</h3>
+      <p>Digital twin toolkit for in-silico MIP development — automated polymerization, screening, and rebinding analysis.</p>
+      <span class="tool-lang">Python / RDKit</span>
+    </a>
+    <a href="https://github.com/Tj-Barrett/nose-hoover-schemes" class="tool-card" target="_blank" rel="noopener noreferrer">
+      <div class="tool-icon">N</div>
+      <h3>nose-hoover-schemes</h3>
+      <p>LAMMPS scripts benchmarking Nosé-Hoover barostat integration schemes under uniaxial tension.</p>
+      <span class="tool-lang">LAMMPS</span>
+    </a>
+    <a href="https://github.com/Tj-Barrett" class="tool-card tool-card-more" target="_blank" rel="noopener noreferrer">
+      <div class="tool-icon">+</div>
+      <h3>More on GitHub</h3>
+      <p>Additional simulation utilities, analysis scripts, and experimental tools.</p>
+      <span class="tool-lang">View All →</span>
+    </a>
+  </div>
+</section>
 
-								
-							</article>
-						
-						<!-- Research -->
-						<article id="research" class="panel">
-							<header>
-								<h2>Education</h2>
-							</header>
-							<section>
-								<p> Ph.D. Northeastern University, 2024<br>
-								    M.S. Northeastern University, 2018<br>
-								    B.S. University of Rochester, 2016</p>
-							</section>
-							<header>
-								<h2>Resume / CV</h2>
-							</header>
-							<section>
-								<p><a href="https://github.com/Tj-Barrett/Tj-Barrett.github.io/blob/main/Thomas%20Barrett%20Resume.pdf"><b><em>My Resume</em></b></a></p>
-								<p><a href="https://github.com/Tj-Barrett/Tj-Barrett.github.io/blob/main/Thomas%20Barrett%20CV.pdf"><b><em>My CV</em></b></a></p>
-							</section>
-							<header>
-								<h2>Research</h2>
-							</header>
-							<p> 
-								My Postdoc work largely revolved around the development of <a href="https://github.com/Tj-Barrett/mipkit"><b><em>MIPkit</em></b></a>, 
-								a digital twin toolkit for the development of Molecularly Imprinted Polymers (MIPs). The package uses RDkit to automatically detect
-								and polymerize vinyl groups to simulate free radical polymerization from a list of ~100 functional monomers, providing us good coverage
-								of the functional monomer chemical space.
-								<br>
-								Additionally, I developed a PLA/PCL/ZIF-8 electrospun composite scaffolding for biomedical implants.
-								<br>
-								<br>
-								My PhD work focused on developing a hierarchical multiscale model to represent semi-crystalline polymer composites properly.
-								Our approach begins with a coarse-grained polymer simulation, where we can model both homo- and heterogeneous crystallization.
-								These provide us with references for calibration with experimental results, with the latter being important for our understanding of the
-								interphase region. From here, we developed <a href="https://doi.org/10.1021/acs.jctc.4c01216"><b><em>pothos</em></b></a> and <a href="https://github.com/Tj-Barrett/mdvoro"><b><em>mdvoro</em></b></a> to
-								convert the CG control volumes into finite element representative volumes, where they may be subjected to continuum mechanics. 
-							</p>
-						</article>
+<hr class="divider"/>
 
-						<!-- Contact -->
-						<article id="contact" class="panel">
-							<header>
-								<h2>Contact Me</h2>
-							</header>
-							<section>
-								<p> barrett.t@northeastern.edu </p>
-							</section>
-						</article>
-					</div>
+<!-- ===================== SKILLS ===================== -->
+<section id="skills">
+  <div class="section-eyebrow">Technical capabilities</div>
+  <h2 class="section-title">Skills & Methods</h2>
+  <div class="skills-grid">
+    <div class="skill-group">
+      <h4>Simulation</h4>
+      <ul>
+        <li>LAMMPS, GROMACS (MD)</li>
+        <li>ORCA (DFT)</li>
+        <li>Abaqus, COMSOL, ANSYS (FEA)</li>
+        <li>Coarse-grained modeling</li>
+        <li>Free energy calculations</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>Machine Learning</h4>
+      <ul>
+        <li>PyTorch, E3NN</li>
+        <li>Graph neural networks</li>
+        <li>Surrogate modeling</li>
+        <li>Bayesian optimization</li>
+        <li>Generative models (diffusion)</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>Characterization</h4>
+      <ul>
+        <li>SEM, AFM, WAXD</li>
+        <li>DMA, TGA, DSC</li>
+        <li>FTIR-ATR, UV-VIS, RAMAN</li>
+        <li>Nanoindentation</li>
+        <li>Tribometry</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>Software & Dev</h4>
+      <ul>
+        <li>Python</li>
+        <li>C++, Fortran</li>
+        <li>RDKit, cheminformatics</li>
+        <li>Docker, Linux, HPC</li>
+        <li>Git, CI/CD</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>Materials Systems</h4>
+      <ul>
+        <li>Semi-crystalline polymers</li>
+        <li>Polymer composites</li>
+        <li>MIP development</li>
+        <li>Thin film coatings</li>
+        <li>Biomedical scaffolds</li>
+      </ul>
+    </div>
+    <div class="skill-group">
+      <h4>Methodology</h4>
+      <ul>
+        <li>Multiscale modeling</li>
+        <li>Inverse design</li>
+        <li>Interphase characterization</li>
+        <li>Statistical mechanics</li>
+        <li>Scientific software development</li>
+      </ul>
+    </div>
+  </div>
+</section>
 
-				<!-- Footer -->
-					<div id="footer">
-						<ul class="copyright">
-							<li>&copy; Thomas J. Barrett</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
-						</ul>
-					</div>
+<hr class="divider"/>
 
-			</div>
+<!-- ===================== CONTACT ===================== -->
+<section id="contact" style="padding-bottom: 3rem;">
+  <div class="contact-block">
+    <div>
+      <div class="section-eyebrow" style="margin-bottom:0.5rem;">Get in touch</div>
+      <!-- <h2>Open to collaboration</h2> -->
+      <p style="margin-top:0.75rem;">I am interested in industrial research and academic or national lab roles in experimental and computational materials science.</p>
+    </div>
+    <div class="contact-links">
+      <a href="mailto:barrett.t@northeastern.edu" class="contact-link-item" aria-label="Send email to Thomas Barrett">
+        <span class="contact-link-label">Email</span>barrett.t@northeastern.edu
+      </a>
+      <a href="https://linkedin.com/in/tj-barrett" class="contact-link-item" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">
+        <span class="contact-link-label">LinkedIn</span>linkedin.com/in/tj-barrett
+      </a>
+      <a href="https://github.com/Tj-Barrett" class="contact-link-item" target="_blank" rel="noopener noreferrer" aria-label="View GitHub profile">
+        <span class="contact-link-label">GitHub</span>github.com/Tj-Barrett
+      </a>
+      <a href="https://scholar.google.com/citations?user=_dvz1tcAAAAJ" class="contact-link-item" target="_blank" rel="noopener noreferrer" aria-label="View Google Scholar profile">
+        <span class="contact-link-label">Scholar</span>Google Scholar
+      </a>
+    </div>
+  </div>
+</section>
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+<!-- ===================== FOOTER ===================== -->
+<footer>
+  <p>© 2026 Thomas J. Barrett</p>
+  <p>tjbarrett.dev</p>
+</footer>
 
-	</body>
+<script>
+// Active nav state on scroll
+const sections = document.querySelectorAll('section[id], .hero[id]');
+const navLinks = document.querySelectorAll('nav ul a');
+
+function updateActiveNavLink() {
+  let currentSection = '';
+
+  sections.forEach(section => {
+    const sectionTop = section.offsetTop;
+    const sectionHeight = section.clientHeight;
+    if (window.scrollY >= (sectionTop - 100)) {
+      currentSection = section.getAttribute('id');
+    }
+  });
+
+  navLinks.forEach(link => {
+    link.classList.remove('active');
+    if (link.getAttribute('href') === '#' + currentSection) {
+      link.classList.add('active');
+    }
+  });
+}
+
+window.addEventListener('scroll', updateActiveNavLink);
+window.addEventListener('load', updateActiveNavLink);
+</script>
+
+</body>
 </html>
-
-
-
-
-
-
