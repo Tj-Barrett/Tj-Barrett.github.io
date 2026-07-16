@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Thomas J. Barrett, PhD — Computational Materials Scientist specializing in multiscale simulation of polymers and composites.">
-<meta name="theme-color" content="#0A0E14">
+<meta name="theme-color" content="#F5F4F0">
 <meta property="og:title" content="Thomas J. Barrett, PhD | Computational Materials Scientist">
 <meta property="og:description" content="Multiscale simulation of polymers and composites - MD and DFT through FEA, machine learning potentials, and open-source scientific software.">
 <meta property="og:type" content="website">
@@ -17,6 +17,12 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
+<script>
+(function(){
+  var t=localStorage.getItem('theme')||(window.matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');
+  document.documentElement.setAttribute('data-theme',t);
+})();
+</script>
 </head>
 <body>
 
@@ -32,6 +38,10 @@
     <li><a href="#tools" aria-label="Jump to tools section">Tools</a></li>
     <li><a href="#contact" aria-label="Jump to contact section">Contact</a></li>
   </ul>
+  <button id="theme-toggle" class="theme-toggle" onclick="toggleTheme()" aria-label="Switch to dark mode">
+    <span class="icon-moon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 12.79A9 9 0 1 1 11.21 3 7 7 0 0 0 21 12.79z"/></svg></span>
+    <span class="icon-sun"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="5"/><line x1="12" y1="1" x2="12" y2="3"/><line x1="12" y1="21" x2="12" y2="23"/><line x1="4.22" y1="4.22" x2="5.64" y2="5.64"/><line x1="18.36" y1="18.36" x2="19.78" y2="19.78"/><line x1="1" y1="12" x2="3" y2="12"/><line x1="21" y1="12" x2="23" y2="12"/><line x1="4.22" y1="19.78" x2="5.64" y2="18.36"/><line x1="18.36" y1="5.64" x2="19.78" y2="4.22"/></svg></span>
+  </button>
 </nav>
 
 <!-- ===================== HERO ===================== -->
@@ -43,11 +53,11 @@
     </div>
     -->
     <div class="hero-eyebrow">Computational & Experimental Materials Science</div>
-    <h1>Thomas J.<br><span class="accent">Barrett</span>, PhD</h1>
-    <div class="status-badge">Open to opportunities</div>
-    <p class="hero-desc">
-      Multiscale simulation of polymers and composites - MD and DFT through FEA, machine learning potentials, and open-source scientific software.
-    </p>
+    <h1>Thomas J. Barrett, PhD</h1>
+    <div class="hero-position">Research Associate · Brookhaven National Lab</div>
+    <!-- <p class="hero-desc">
+      Hello! I am a materials scientist and engineer, with experience in both computational and experimental labs. You can find my academic work and personal projects below.
+    </p> -->
     <div class="hero-links">
       <a href="#research" class="btn btn-primary">Explore my research</a>
       <a href="https://github.com/Tj-Barrett" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -63,17 +73,48 @@
   <!-- Periodic simulation cell — SVG wireframe signature element -->
 </div>
 
+<!-- ===================== PROJECTS TEASER ===================== -->
+<!-- <div class="projects-teaser">
+  <div class="projects-teaser-header">
+    <div class="section-eyebrow">Personal projects</div>
+    <a href="projects.html" class="projects-teaser-all">View all →</a>
+  </div>
+  <div class="projects-teaser-grid">
+    <div class="project-card">
+      <div class="project-card-body">
+        <h3>openMIP</h3>
+        <p>An open-source toolkit for molecularly imprinted polymer design — automating vinyl polymerization simulation and in-silico screening of functional monomers to guide MIP development without exhaustive synthesis.</p>
+        <div class="project-tags">
+          <span class="project-tag">Python</span>
+          <span class="project-tag">RDKit</span>
+          <span class="project-tag">MD Simulation</span>
+        </div>
+        <div class="project-links">
+          <a href="#" class="project-link">GitHub →</a>
+        </div>
+      </div>
+    </div>
+    <a href="projects.html" class="project-card tool-card-more">
+      <div class="project-card-body">
+        <div class="tool-icon">+</div>
+        <h3>More projects</h3>
+        <p>Hardware builds, software experiments, and other things built outside the lab.</p>
+      </div>
+    </a>
+  </div>
+</div> -->
+
 <!-- ===================== STATS STRIP ===================== -->
 <!-- Patent stat commented out — restore when ready:
   <div class="stat-item"><div class="stat-num">1</div><div class="stat-label">Pending patent</div></div>
 -->
-<div class="stats-strip">
+<!-- <div class="stats-strip">
   <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">First-author publications</div></div>
   <div class="stat-item"><div class="stat-num">3+</div><div class="stat-label">Open-source packages</div></div>
   <div class="stat-item"><div class="stat-num">8+</div><div class="stat-label">Years simulation experience</div></div>
 </div>
 
-<hr class="divider"/>
+<hr class="divider"/> -->
 
 <!-- ===================== RESEARCH ===================== -->
 <section id="research">
@@ -282,18 +323,15 @@
 <!-- ===================== CONTACT ===================== -->
 <section id="contact" style="padding-bottom: 3rem;">
   <div class="contact-block">
-    <div>
-      <div class="section-eyebrow" style="margin-bottom:0.5rem;">Get in touch</div>
-      <!-- <h2>Open to collaboration</h2> -->
-      <p style="margin-top:0.75rem;">I am interested in industrial research and academic or national lab roles in experimental and computational materials science.</p>
-    </div>
     <div class="contact-links">
       <a href="mailto:barrett.t@northeastern.edu" class="contact-link-item" aria-label="Send email to Thomas Barrett">
         <span class="contact-link-label">Email</span>barrett.t@northeastern.edu
       </a>
-      <a href="https://linkedin.com/in/tj-barrett" class="contact-link-item" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">
-        <span class="contact-link-label">LinkedIn</span>linkedin.com/in/tj-barrett
+      <a href="https://www.linkedin.com/in/barrettthomasj/" class="contact-link-item" target="_blank" rel="noopener noreferrer" aria-label="Connect on LinkedIn">
+        <span class="contact-link-label">LinkedIn</span>linkedin.com/in/barrettthomasj
       </a>
+    </div>
+    <div class="contact-links">
       <a href="https://github.com/Tj-Barrett" class="contact-link-item" target="_blank" rel="noopener noreferrer" aria-label="View GitHub profile">
         <span class="contact-link-label">GitHub</span>github.com/Tj-Barrett
       </a>
@@ -311,6 +349,15 @@
 </footer>
 
 <script>
+function toggleTheme() {
+  var current = document.documentElement.getAttribute('data-theme');
+  var next = current === 'dark' ? 'light' : 'dark';
+  document.documentElement.setAttribute('data-theme', next);
+  localStorage.setItem('theme', next);
+  document.getElementById('theme-toggle').setAttribute('aria-label', next === 'dark' ? 'Switch to light mode' : 'Switch to dark mode');
+  document.querySelector('meta[name="theme-color"]').content = next === 'dark' ? '#1A1A18' : '#F5F4F0';
+}
+
 // Active nav state on scroll
 const sections = document.querySelectorAll('section[id], .hero[id]');
 const navLinks = document.querySelectorAll('nav ul a');
@@ -319,12 +366,19 @@ function updateActiveNavLink() {
   let currentSection = '';
 
   sections.forEach(section => {
-    const sectionTop = section.offsetTop;
-    const sectionHeight = section.clientHeight;
-    if (window.scrollY >= (sectionTop - 100)) {
+    if (window.scrollY >= (section.offsetTop - 100)) {
       currentSection = section.getAttribute('id');
     }
   });
+
+  // When near the page bottom, activate the last section that has a nav link.
+  // This handles sections whose offsetTop - 100 exceeds the max scrollY.
+  if (window.scrollY + window.innerHeight >= document.documentElement.scrollHeight - 50) {
+    sections.forEach(section => {
+      const id = section.getAttribute('id');
+      if (document.querySelector('nav ul a[href="#' + id + '"]')) currentSection = id;
+    });
+  }
 
   navLinks.forEach(link => {
     link.classList.remove('active');
