@@ -47,17 +47,8 @@
 <!-- ===================== HERO ===================== -->
 <div class="hero" id="main-content">
   <div>
-    <!-- Optional: Add profile photo here by uncommenting:
-    <div class="profile-photo">
-      <img src="path-to-your-photo.jpg" alt="Thomas J. Barrett">
-    </div>
-    -->
-    <div class="hero-eyebrow">Computational & Experimental Materials Science</div>
     <h1>Thomas J. Barrett, PhD</h1>
-    <div class="hero-position">Research Associate · Brookhaven National Lab</div>
-    <!-- <p class="hero-desc">
-      Hello! I am a materials scientist and engineer, with experience in both computational and experimental labs. You can find my academic work and personal projects below.
-    </p> -->
+    <div class="hero-position">Research Associate · Brookhaven National Laboratory</div>
     <div class="hero-links">
       <a href="#research" class="btn btn-primary">Explore my research</a>
       <a href="https://github.com/Tj-Barrett" class="btn btn-ghost" target="_blank" rel="noopener noreferrer">GitHub</a>
@@ -69,83 +60,37 @@
       <div class="edu-item"><span class="edu-deg">BS</span><span class="edu-inst">University of Rochester</span><span class="edu-year">2016</span></div>
     </div>
   </div>
-
-  <!-- Periodic simulation cell — SVG wireframe signature element -->
-</div>
-
-<!-- ===================== PROJECTS TEASER ===================== -->
-<!-- <div class="projects-teaser">
-  <div class="projects-teaser-header">
-    <div class="section-eyebrow">Personal projects</div>
-    <a href="projects.html" class="projects-teaser-all">View all →</a>
+  <div class="hero-photo">
+    <img src="assets/headshot.png" alt="Thomas J. Barrett">
   </div>
-  <div class="projects-teaser-grid">
-    <div class="project-card">
-      <div class="project-card-body">
-        <h3>openMIP</h3>
-        <p>An open-source toolkit for molecularly imprinted polymer design — automating vinyl polymerization simulation and in-silico screening of functional monomers to guide MIP development without exhaustive synthesis.</p>
-        <div class="project-tags">
-          <span class="project-tag">Python</span>
-          <span class="project-tag">RDKit</span>
-          <span class="project-tag">MD Simulation</span>
-        </div>
-        <div class="project-links">
-          <a href="#" class="project-link">GitHub →</a>
-        </div>
-      </div>
-    </div>
-    <a href="projects.html" class="project-card tool-card-more">
-      <div class="project-card-body">
-        <div class="tool-icon">+</div>
-        <h3>More projects</h3>
-        <p>Hardware builds, software experiments, and other things built outside the lab.</p>
-      </div>
-    </a>
-  </div>
-</div> -->
-
-<!-- ===================== STATS STRIP ===================== -->
-<!-- Patent stat commented out — restore when ready:
-  <div class="stat-item"><div class="stat-num">1</div><div class="stat-label">Pending patent</div></div>
--->
-<!-- <div class="stats-strip">
-  <div class="stat-item"><div class="stat-num">4</div><div class="stat-label">First-author publications</div></div>
-  <div class="stat-item"><div class="stat-num">3+</div><div class="stat-label">Open-source packages</div></div>
-  <div class="stat-item"><div class="stat-num">8+</div><div class="stat-label">Years simulation experience</div></div>
 </div>
-
-<hr class="divider"/> -->
 
 <!-- ===================== RESEARCH ===================== -->
 <section id="research">
   <div class="section-eyebrow">Focus areas</div>
   <h2 class="section-title">Research</h2>
   <div class="award-badge">🏅 <span>2023 PACK International Research Fellowship</span></div>
-  <div class="research-grid">
-    <div class="research-card">
+  <div class="research-list">
+    <div class="research-row">
+      <div class="research-card-tag">Autonomous Synthesis</div>
+      <h3>Python tools for autonomous synthesis @ NSLS-II</h3>
+      <p>Supporting the development of and deploying autonomous synthesis workflows and pipelines to support users and research on the NSLS-II XPD beamline.</p>
+    </div>
+    <div class="research-row">
+      <div class="research-card-tag">Digital Twin / Inverse Design</div>
+      <h3>Agnostic Chemical Reaction Framework</h3>
+      <p>MIPkit: RDKit-driven toolkit for automated vinyl polymerization simulation and in-silico screening of ~115 functional monomers, enabling systematic MIP development without exhaustive synthesis.</p>
+    </div>
+    <div class="research-row">
       <div class="research-card-tag">Multiscale Modeling</div>
       <h3>Hierarchical polymer composite simulation</h3>
       <p>Coarse-grained MD → FEA pipeline for semi-crystalline polymer composites, capturing homo- and heterogeneous crystallization, interphase structure, and continuum mechanical response across length scales.</p>
-    </div>
-    <div class="research-card">
-      <div class="research-card-tag">Scientific Software</div>
-      <h3>Polymer microstructure analysis tools</h3>
-      <p>pothos and mdvoro: open-source Python packages for chain orientation tracking, Voronoi tessellation, and conversion of MD control volumes into FEA representative volume elements.</p>
-    </div>
-    <div class="research-card">
-      <div class="research-card-tag">Digital Twin / Inverse Design</div>
-      <h3>Molecularly imprinted polymer framework</h3>
-      <p>MIPkit: RDKit-driven toolkit for automated vinyl polymerization simulation and in-silico screening of ~100 functional monomers, enabling systematic MIP development without exhaustive synthesis.</p>
-    </div>
-    <div class="research-card">
-      <div class="research-card-tag">Statistical Mechanics</div>
-      <h3>Thermostat and barostat integration</h3>
-      <p>Systematic comparison of Nosé-Hoover integrator schemes, demonstrating that barostat coupling choice has a measurable and underappreciated effect on uniaxial tension results in solid-phase simulations.</p>
     </div>
   </div>
 </section>
 
 <hr class="divider"/>
+
 
 <!-- ===================== PUBLICATIONS ===================== -->
 <section id="publications">
@@ -157,6 +102,7 @@
       <div>
         <div class="pub-title">Indications of ZIF-8 promoting cell viability in electrospun tricuspid valve scaffolding.<span class="pub-badge">In Preparation</span></div>
         <div class="pub-venue">Expected 2026</div>
+        <div class="pub-links"></div>
       </div>
     </div>
     <div class="pub-item">
@@ -214,35 +160,37 @@
 <section id="tools">
   <div class="section-eyebrow">Open source</div>
   <h2 class="section-title">Tools & Packages</h2>
-  <div class="tools-grid">
-    <a href="https://github.com/Tj-Barrett/pothos" class="tool-card" target="_blank" rel="noopener noreferrer">
-      <div class="tool-icon">Φ</div>
-      <h3>pothos</h3>
-      <p>Chain orientation and microstructure evolution monitoring for MD trajectories of semi-crystalline polymers.</p>
-      <span class="tool-lang">Python</span>
-    </a>
-    <a href="https://github.com/Tj-Barrett/mdvoro" class="tool-card" target="_blank" rel="noopener noreferrer">
-      <div class="tool-icon">V</div>
-      <h3>mdvoro</h3>
-      <p>Voronoi tessellation of MD simulation cells for conversion into FEA representative volume elements.</p>
-      <span class="tool-lang">Python</span>
-    </a>
-    <a href="https://github.com/Tj-Barrett/mipkit" class="tool-card" target="_blank" rel="noopener noreferrer">
+  <div class="tools-list">
+    <a href="https://github.com/Tj-Barrett/mipkit" class="tool-row" target="_blank" rel="noopener noreferrer">
       <div class="tool-icon">M</div>
-      <h3>MIPkit</h3>
-      <p>Digital twin toolkit for in-silico MIP development — automated polymerization, screening, and rebinding analysis.</p>
+      <div class="tool-row-body">
+        <h3>MIPkit</h3>
+        <p>Digital twin toolkit for in-silico MIP development — automated polymerization, screening, and rebinding analysis.</p>
+      </div>
       <span class="tool-lang">Python / RDKit</span>
     </a>
-    <a href="https://github.com/Tj-Barrett/nose-hoover-schemes" class="tool-card" target="_blank" rel="noopener noreferrer">
-      <div class="tool-icon">N</div>
-      <h3>nose-hoover-schemes</h3>
-      <p>LAMMPS scripts benchmarking Nosé-Hoover barostat integration schemes under uniaxial tension.</p>
-      <span class="tool-lang">LAMMPS</span>
+    <a href="https://github.com/Tj-Barrett/mdvoro" class="tool-row" target="_blank" rel="noopener noreferrer">
+      <div class="tool-icon">V</div>
+      <div class="tool-row-body">
+        <h3>MDvoro</h3>
+        <p>Voronoi tessellation of MD simulation cells for conversion into FEA representative volume elements.</p>
+      </div>
+      <span class="tool-lang">Python</span>
     </a>
-    <a href="https://github.com/Tj-Barrett" class="tool-card tool-card-more" target="_blank" rel="noopener noreferrer">
+    <a href="https://github.com/Tj-Barrett/pothos" class="tool-row" target="_blank" rel="noopener noreferrer">
+      <div class="tool-icon">Φ</div>
+      <div class="tool-row-body">
+        <h3>pothos</h3>
+        <p>Chain orientation and microstructure evolution monitoring for MD trajectories of semi-crystalline polymers.</p>
+      </div>
+      <span class="tool-lang">Python</span>
+    </a>
+    <a href="https://github.com/Tj-Barrett" class="tool-row tool-row-more" target="_blank" rel="noopener noreferrer">
       <div class="tool-icon">+</div>
-      <h3>More on GitHub</h3>
-      <p>Additional simulation utilities, analysis scripts, and experimental tools.</p>
+      <div class="tool-row-body">
+        <h3>More on GitHub</h3>
+        <p>Additional simulation utilities, analysis scripts, and experimental tools.</p>
+      </div>
       <span class="tool-lang">View All →</span>
     </a>
   </div>
@@ -261,16 +209,13 @@
         <li>LAMMPS, GROMACS (MD)</li>
         <li>ORCA (DFT)</li>
         <li>Abaqus, COMSOL, ANSYS (FEA)</li>
-        <li>Coarse-grained modeling</li>
-        <li>Free energy calculations</li>
       </ul>
     </div>
     <div class="skill-group">
       <h4>Machine Learning</h4>
       <ul>
-        <li>PyTorch, E3NN</li>
+        <li>PyTorch</li>
         <li>Graph neural networks</li>
-        <li>Surrogate modeling</li>
         <li>Bayesian optimization</li>
         <li>Generative models (diffusion)</li>
       </ul>
@@ -280,7 +225,7 @@
       <ul>
         <li>SEM, AFM, WAXD</li>
         <li>DMA, TGA, DSC</li>
-        <li>FTIR-ATR, UV-VIS, RAMAN</li>
+        <li>FTIR, UV-VIS, RAMAN</li>
         <li>Nanoindentation</li>
         <li>Tribometry</li>
       </ul>
@@ -288,19 +233,14 @@
     <div class="skill-group">
       <h4>Software & Dev</h4>
       <ul>
-        <li>Python</li>
-        <li>C++, Fortran</li>
-        <li>RDKit, cheminformatics</li>
-        <li>Docker, Linux, HPC</li>
-        <li>Git, CI/CD</li>
+        <li>Python, C++, Fortran</li>
+        <li>RDKit</li>
       </ul>
     </div>
     <div class="skill-group">
       <h4>Materials Systems</h4>
       <ul>
-        <li>Semi-crystalline polymers</li>
-        <li>Polymer composites</li>
-        <li>MIP development</li>
+        <li>Polymer nanocomposites</li>
         <li>Thin film coatings</li>
         <li>Biomedical scaffolds</li>
       </ul>
@@ -310,9 +250,6 @@
       <ul>
         <li>Multiscale modeling</li>
         <li>Inverse design</li>
-        <li>Interphase characterization</li>
-        <li>Statistical mechanics</li>
-        <li>Scientific software development</li>
       </ul>
     </div>
   </div>
