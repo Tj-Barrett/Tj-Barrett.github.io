@@ -336,7 +336,14 @@
     font-size: 14px;
     color: var(--text-secondary);
     line-height: 1.75;
-    max-width: 640px;
+  }
+  .inline-link {
+    font-weight: 700;
+    color: inherit;
+    text-decoration: none;
+  }
+  .inline-link:hover {
+    color: var(--accent);
   }
 
   /* PUBLICATIONS */
